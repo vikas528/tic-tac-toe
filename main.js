@@ -34,7 +34,7 @@ function turn(idName){
         trn=true;
     }
 }
-    
+
 function displayToggle(idName){
     let crss_str = "cross-";
     let circ_str = "circle-"
@@ -43,6 +43,7 @@ function displayToggle(idName){
     let crss = document.getElementById(crss_str);
     let circ = document.getElementById(circ_str);
     let trn = document.getElementById('turn').textContent;
+
     if(trn==='1' && arr[idName-1]==0){
         crss.style.display = "block";
         circ.style.display = "none"
@@ -65,26 +66,99 @@ function displayToggle(idName){
         document.getElementById('player').innerHTML = "GAME OVER";
         document.getElementById('player').style.color = 'black';
     }
+    let win_check = actual_game(arr);
+    if(win_check==1){
+        document.getElementById('player').innerHTML = "GAME OVER, PLAYER 1 WINS";
+        document.getElementById('player').style.color = 'blue';
+        setInterval(() => {
+            window.location.reload();
+        }, 3000);
+    }
+    else if(win_check==-1){
+        document.getElementById('player').innerHTML = "GAME OVER, PLAYER 2 WINS";
+        document.getElementById('player').style.color = 'blue';
+        setInterval(() => {
+            window.location.reload();
+        }, 3000);
+    }
+    console.log(win_check);
 }
 
-let result=false;
+// let result=0;
 function actual_game(arr)
 {
-    if(!arr[4]){
-        if(!arr[0] && !arr[8]){
-            result=true;
+    if(arr[4]==1){
+        if(arr[0]==1 && arr[8]==1){
+            return 1;
         }
-        else if(!arr[2] && !arr[6]){
-            result=true;
+        else if(arr[2]==1 && arr[6]==1){
+            return 1;
         }
-        else if(!arr[1] && !arr[7]){
-            result=true;
+        else if(arr[1]==1 && arr[7]==1){
+            return 1;
         }
-        else if(!arr[3] && !arr[5]){
-            result=true;
+        else if(arr[3]==1 && arr[5]==1){
+            return 1;
         }
     }
-    // else if(!arr[0]){
-        // if(!arr[1] && !arr[2])
-    // }
+    if(arr[0]==1){
+        if(arr[1]==1 && arr[2]==1){
+            return 1;
+        }
+        else if(arr[3]==1 && arr[6]==1){
+            return 1;
+        }
+    }
+    if(arr[8]==1){
+        if(arr[5]==1 && arr[2]==1){
+            return 1;
+        }
+        else if(arr[7]==1 && arr[6]==1){
+            return 1;
+        }
+    }
+    if(arr[4]==-1){
+        if(arr[0]==-1 && arr[8]==-1){
+            return -1;
+        }
+        else if(arr[2]==-1 && arr[6]==-1){
+            return -1;
+        }
+        else if(arr[1]==-1 && arr[7]==-1){
+            return -1;
+        }
+        else if(arr[3]==-1 && arr[5]==-1){
+            return -1;
+        }
+    }
+    if(arr[0]==-1){
+        if(arr[1]==-1 && arr[2]==-1){
+            return -1;
+        }
+        else if(arr[3]==-1 && arr[6]==-1){
+            return -1;
+        }
+    }
+    if(arr[8]==-1){
+        if(arr[5]==-1 && arr[2]==-1){
+            return -1;
+        }
+        else if(arr[7]==-1 && arr[6]==-1){
+            return -1;
+        }
+    }
+    return 0;
 }
+/*
+\ 0 1 2 \
+\ 3 4 5 \
+\ 6 7 8 \
+*/
+
+let newGame = document.querySelector('#btn')
+
+function reload(){
+    reload = location.reload();
+}
+
+newGame.addEventListener('click', reload, false);
