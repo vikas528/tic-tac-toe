@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="player">
+      <span>PLAYER</span> <span id="turn">1</span><span>'s TURN</span>
+    </div>
+    <div id="container">
+      <div class="section" onclick="turn('1'); displayToggle('1');" id="section-1">
+        <div class="cross" id="cross-1">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-1"></div>
+      </div>
+      <div class="section" onclick="turn('2'); displayToggle('2');" id="section-2">
+        <div class="cross" id="cross-2">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-2"></div>
+      </div>
+      <div class="section" onclick="turn('3'); displayToggle('3');" id="section-3">
+        <div class="cross" id="cross-3">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-3"></div>
+      </div>
+      <div class="section" onclick="turn('4'); displayToggle('4');" id="section-4">
+        <div class="cross" id="cross-4">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-4"></div>
+      </div>
+      <div class="section" onclick="turn('5'); displayToggle('5');" id="section-5">
+        <div class="cross" id="cross-5">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-5"></div>
+      </div>
+      <div class="section" onclick="turn('6'); displayToggle('6');" id="section-6">
+        <div class="cross" id="cross-6">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-6"></div>
+      </div>
+      <div class="section" onclick="turn('7'); displayToggle('7');" id="section-7">
+        <div class="cross" id="cross-7">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-7"></div>
+      </div>
+      <div class="section" onclick="turn('8'); displayToggle('8');" id="section-8">
+        <div class="cross" id="cross-8">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-8"></div>
+      </div>
+      <div class="section" onclick="turn('9'); displayToggle('9');" id="section-9">
+        <div class="cross" id="cross-9">
+          <div class="cross-l"></div>
+          <div class="cross-r"></div>
+        </div>
+        <div class="circle" id="circle-9"></div>
+      </div>
+    </div>
+    <button id="btn" onclick="window.location.reload();">New Game</button>
+    <script src="main.js"></script>
+  </body>
+  </html>

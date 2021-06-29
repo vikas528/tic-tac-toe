@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Special Elite', cursive;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 600px;
+    background-color: rgb(84, 243, 209);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container .section {
+    position: relative;
+    /* display: inline-block; */
+    display: flex;
+    margin: 5px;
+    height: 190px;
+    width: 190px;
+    background-color: rgb(255, 255, 255);
+}
+
+.cross {
+    /* position: absolute; */
+    /* width: 190px; */
+    /* width: 190px; */
+    display: none;
+}
+
+.cross .cross-l{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 220px;
+    height: 20px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.cross .cross-r{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 220px;
+    height: 20px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.section .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    border: 14px solid rgb(255, 117, 4);
+    display: none;
+}
+
+#player {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%, 0);
+    color: rgb(255, 117, 4);
+}
+
+#btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 85%;
+    /* width: 150px; */
+    /* height: 40px; */
+    outline: none;
+    background: none;
+    color: rgb(84, 243, 209);
+    font-size: 25px;
+    padding: 14px 30px 10px 30px;
+    border: 2px solid rgb(84, 243, 209);
+    cursor: pointer;
+}
